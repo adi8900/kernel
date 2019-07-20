@@ -1173,12 +1173,15 @@ static int __set_cpus_allowed_ptr(struct task_struct *p,
 	rq = task_rq_lock(p, &rf);
 	update_rq_clock(rq);
 
-	if (p->flags & PF_KTHREAD) {
-		/*
-		 * Kernel threads are allowed on online && !active CPUs
-		 */
+	/*
+	 * Kernel threads are allowed on online && !active CPUs
+	 */
+	if (p->flags & PF_KTHREAD)
 		cpu_valid_mask = cpu_online_mask;
-	}
+
+	/* Force all performance-critical kthreads onto the big cluster */
+	if (p->flags & PF_PERF_CRITICAL)
+		new_mask = cpu_perf_mask;
 
 	/*
 	 * Must re-check here, to close a race against __kthread_bind(),
