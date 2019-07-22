@@ -655,7 +655,7 @@ static int fpc1145_probe(struct platform_device *pdev)
 	if (rc)
 		goto exit;
 
-	irqf = IRQF_TRIGGER_HIGH | IRQF_ONESHOT;
+	irqf = IRQF_TRIGGER_HIGH | IRQF_ONESHOT | IRQF_PERF_CRITICAL;
 	mutex_init(&fpc1145->lock);
 	mutex_init(&fpc1145->intrpoll_lock);
 
