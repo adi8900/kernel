@@ -1529,6 +1529,7 @@ static int32_t nvt_ts_probe(struct i2c_client *client, const struct i2c_device_i
 	if (client->irq) {
 		pr_debug("int_trigger_type=%d\n", ts->int_trigger_type);
 
+		ts->int_trigger_type |= IRQF_PERF_CRITICAL;
 		ret = request_irq(client->irq, nvt_ts_irq_handler, ts->int_trigger_type, client->name, ts);
 		if (ret != 0) {
 			pr_err("request irq failed. ret=%d\n", ret);
