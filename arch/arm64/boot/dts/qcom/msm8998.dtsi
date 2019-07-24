@@ -51,7 +51,7 @@
 
 		CPU0: cpu@0 {
 			device_type = "cpu";
-			compatible = "arm,armv8";
+			compatible = "qcom,kryo";
 			reg = <0x0 0x0>;
 			qcom,limits-info = <&mitigation_profile0>;
 			qcom,lmh-dcvs = <&lmh_dcvs0>;
@@ -62,16 +62,16 @@
 			qcom,ea = <&ea0>;
 			sched-energy-costs = <&CPU_COST_0 &CLUSTER_COST_0>;
 			L2_0: l2-cache {
-			      compatible = "arm,arch-cache";
+			      compatible = "cache";
 			      cache-level = <2>;
 				  qcom,dump-size = <0x0>;      /* A53 L2 dump not supported */
 			};
 			L1_I_0: l1-icache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x9040>;
 			};
 			L1_D_0: l1-dcache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x9040>;
 			};
 			L1_TLB_0: l1-tlb {
@@ -81,7 +81,7 @@
 
 		CPU1: cpu@1 {
 			device_type = "cpu";
-			compatible = "arm,armv8";
+			compatible = "qcom,kryo";
 			reg = <0x0 0x1>;
 			qcom,limits-info = <&mitigation_profile1>;
 			qcom,lmh-dcvs = <&lmh_dcvs0>;
@@ -92,11 +92,11 @@
 			qcom,ea = <&ea1>;
 			sched-energy-costs = <&CPU_COST_0 &CLUSTER_COST_0>;
 			L1_I_1: l1-icache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x9040>;
 			};
 			L1_D_1: l1-dcache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x9040>;
 			};
 			L1_TLB_1: l1-tlb {
@@ -106,7 +106,7 @@
 
 		CPU2: cpu@2 {
 			device_type = "cpu";
-			compatible = "arm,armv8";
+			compatible = "qcom,kryo";
 			reg = <0x0 0x2>;
 			qcom,limits-info = <&mitigation_profile2>;
 			qcom,lmh-dcvs = <&lmh_dcvs0>;
@@ -117,11 +117,11 @@
 			qcom,ea = <&ea2>;
 			sched-energy-costs = <&CPU_COST_0 &CLUSTER_COST_0>;
 			L1_I_2: l1-icache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x9040>;
 			};
 			L1_D_2: l1-dcache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x9040>;
 			};
 			L1_TLB_2: l1-tlb {
@@ -131,7 +131,7 @@
 
 		CPU3: cpu@3 {
 			device_type = "cpu";
-			compatible = "arm,armv8";
+			compatible = "qcom,kryo";
 			reg = <0x0 0x3>;
 			qcom,limits-info = <&mitigation_profile3>;
 			qcom,lmh-dcvs = <&lmh_dcvs0>;
@@ -142,11 +142,11 @@
 			qcom,ea = <&ea3>;
 			sched-energy-costs = <&CPU_COST_0 &CLUSTER_COST_0>;
 			L1_I_3: l1-icache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x9040>;
 			};
 			L1_D_3: l1-dcache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x9040>;
 			};
 			L1_TLB_3: l1-tlb {
@@ -156,7 +156,7 @@
 
 		CPU4: cpu@100 {
 			device_type = "cpu";
-			compatible = "arm,armv8";
+			compatible = "qcom,kryo";
 			reg = <0x0 0x100>;
 			qcom,limits-info = <&mitigation_profile4>;
 			qcom,lmh-dcvs = <&lmh_dcvs1>;
@@ -167,15 +167,15 @@
 			qcom,ea = <&ea4>;
 			sched-energy-costs = <&CPU_COST_1 &CLUSTER_COST_1>;
 			L2_1: l2-cache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				cache-level = <2>;
 			};
 			L1_I_100: l1-icache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x12000>;
 			};
 			L1_D_100: l1-dcache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x12000>;
 			};
 			L1_TLB_100: l1-tlb {
@@ -185,7 +185,7 @@
 
 		CPU5: cpu@101 {
 			device_type = "cpu";
-			compatible = "arm,armv8";
+			compatible = "qcom,kryo";
 			reg = <0x0 0x101>;
 			qcom,limits-info = <&mitigation_profile5>;
 			qcom,lmh-dcvs = <&lmh_dcvs1>;
@@ -196,11 +196,11 @@
 			qcom,ea = <&ea5>;
 			sched-energy-costs = <&CPU_COST_1 &CLUSTER_COST_1>;
 			L1_I_101: l1-icache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x12000>;
 			};
 			L1_D_101: l1-dcache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x12000>;
 			};
 			L1_TLB_101: l1-tlb {
@@ -210,7 +210,7 @@
 
 		CPU6: cpu@102 {
 			device_type = "cpu";
-			compatible = "arm,armv8";
+			compatible = "qcom,kryo";
 			reg = <0x0 0x102>;
 			qcom,limits-info = <&mitigation_profile6>;
 			qcom,lmh-dcvs = <&lmh_dcvs1>;
@@ -221,11 +221,11 @@
 			qcom,ea = <&ea6>;
 			sched-energy-costs = <&CPU_COST_1 &CLUSTER_COST_1>;
 			L1_I_102: l1-icache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x12000>;
 			};
 			L1_D_102: l1-dcache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x12000>;
 			};
 			L1_TLB_102: l1-tlb {
@@ -235,7 +235,7 @@
 
 		CPU7: cpu@103 {
 			device_type = "cpu";
-			compatible = "arm,armv8";
+			compatible = "qcom,kryo";
 			reg = <0x0 0x103>;
 			qcom,limits-info = <&mitigation_profile7>;
 			qcom,lmh-dcvs = <&lmh_dcvs1>;
@@ -246,11 +246,11 @@
 			qcom,ea = <&ea7>;
 			sched-energy-costs = <&CPU_COST_1 &CLUSTER_COST_1>;
 			L1_I_103: l1-icache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x12000>;
 			};
 			L1_D_103: l1-dcache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x12000>;
 			};
 			L1_TLB_103: l1-tlb {

@@ -180,6 +180,7 @@ nodes to be present and contain the properties described below.
 			    "nvidia,tegra132-denver"
 			    "qcom,krait"
 			    "qcom,kryo"
+			    "qcom,kryo385"
 			    "qcom,scorpion"
 	- enable-method
 		Value type: <stringlist>

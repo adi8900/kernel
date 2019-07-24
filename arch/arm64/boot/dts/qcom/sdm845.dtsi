@@ -56,7 +56,7 @@
 
 		CPU0: cpu@0 {
 			device_type = "cpu";
-			compatible = "arm,armv8";
+			compatible = "qcom,kryo385";
 			reg = <0x0 0x0>;
 			enable-method = "psci";
 			efficiency = <1024>;
@@ -67,23 +67,23 @@
 			next-level-cache = <&L2_0>;
 			sched-energy-costs = <&CPU_COST_0 &CLUSTER_COST_0>;
 			L2_0: l2-cache {
-			      compatible = "arm,arch-cache";
+			      compatible = "cache";
 			      cache-size = <0x20000>;
 			      cache-level = <2>;
 			      next-level-cache = <&L3_0>;
 
 				L3_0: l3-cache {
-				      compatible = "arm,arch-cache";
+				      compatible = "cache";
 				      cache-size = <0x200000>;
 				      cache-level = <3>;
 				};
 			};
 			L1_I_0: l1-icache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x12000>;
 			};
 			L1_D_0: l1-dcache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0xa000>;
 			};
 			L1_TLB_0: l1-tlb {
@@ -93,7 +93,7 @@
 
 		CPU1: cpu@100 {
 			device_type = "cpu";
-			compatible = "arm,armv8";
+			compatible = "qcom,kryo385";
 			reg = <0x0 0x100>;
 			enable-method = "psci";
 			efficiency = <1024>;
@@ -104,17 +104,17 @@
 			next-level-cache = <&L2_100>;
 			sched-energy-costs = <&CPU_COST_0 &CLUSTER_COST_0>;
 			L2_100: l2-cache {
-			      compatible = "arm,arch-cache";
+			      compatible = "cache";
 			      cache-size = <0x20000>;
 			      cache-level = <2>;
 			      next-level-cache = <&L3_0>;
 			};
 			L1_I_100: l1-icache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x12000>;
 			};
 			L1_D_100: l1-dcache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0xa000>;
 			};
 			L1_TLB_100: l1-tlb {
@@ -124,7 +124,7 @@
 
 		CPU2: cpu@200 {
 			device_type = "cpu";
-			compatible = "arm,armv8";
+			compatible = "qcom,kryo385";
 			reg = <0x0 0x200>;
 			enable-method = "psci";
 			efficiency = <1024>;
@@ -135,17 +135,17 @@
 			next-level-cache = <&L2_200>;
 			sched-energy-costs = <&CPU_COST_0 &CLUSTER_COST_0>;
 			L2_200: l2-cache {
-			      compatible = "arm,arch-cache";
+			      compatible = "cache";
 			      cache-size = <0x20000>;
 			      cache-level = <2>;
 			      next-level-cache = <&L3_0>;
 			};
 			L1_I_200: l1-icache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x12000>;
 			};
 			L1_D_200: l1-dcache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0xa000>;
 			};
 			L1_TLB_200: l1-tlb {
@@ -155,7 +155,7 @@
 
 		CPU3: cpu@300 {
 			device_type = "cpu";
-			compatible = "arm,armv8";
+			compatible = "qcom,kryo385";
 			reg = <0x0 0x300>;
 			enable-method = "psci";
 			efficiency = <1024>;
@@ -166,17 +166,17 @@
 			next-level-cache = <&L2_300>;
 			sched-energy-costs = <&CPU_COST_0 &CLUSTER_COST_0>;
 			L2_300: l2-cache {
-			      compatible = "arm,arch-cache";
+			      compatible = "cache";
 			      cache-size = <0x20000>;
 			      cache-level = <2>;
 			      next-level-cache = <&L3_0>;
 			};
 			L1_I_300: l1-icache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x12000>;
 			};
 			L1_D_300: l1-dcache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0xa000>;
 			};
 			L1_TLB_300: l1-tlb {
@@ -186,7 +186,7 @@
 
 		CPU4: cpu@400 {
 			device_type = "cpu";
-			compatible = "arm,armv8";
+			compatible = "qcom,kryo385";
 			reg = <0x0 0x400>;
 			enable-method = "psci";
 			efficiency = <1740>;
@@ -197,17 +197,17 @@
 			next-level-cache = <&L2_400>;
 			sched-energy-costs = <&CPU_COST_1 &CLUSTER_COST_1>;
 			L2_400: l2-cache {
-			      compatible = "arm,arch-cache";
+			      compatible = "cache";
 			      cache-size = <0x40000>;
 			      cache-level = <2>;
 			      next-level-cache = <&L3_0>;
 			};
 			L1_I_400: l1-icache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x24000>;
 			};
 			L1_D_400: l1-dcache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x14000>;
 			};
 			L1_TLB_400: l1-tlb {
@@ -217,7 +217,7 @@
 
 		CPU5: cpu@500 {
 			device_type = "cpu";
-			compatible = "arm,armv8";
+			compatible = "qcom,kryo385";
 			reg = <0x0 0x500>;
 			enable-method = "psci";
 			efficiency = <1740>;
@@ -228,17 +228,17 @@
 			next-level-cache = <&L2_500>;
 			sched-energy-costs = <&CPU_COST_1 &CLUSTER_COST_1>;
 			L2_500: l2-cache {
-			      compatible = "arm,arch-cache";
+			      compatible = "cache";
 			      cache-size = <0x40000>;
 			      cache-level = <2>;
 			      next-level-cache = <&L3_0>;
 			};
 			L1_I_500: l1-icache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x24000>;
 			};
 			L1_D_500: l1-dcache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x14000>;
 			};
 			L1_TLB_500: l1-tlb {
@@ -248,7 +248,7 @@
 
 		CPU6: cpu@600 {
 			device_type = "cpu";
-			compatible = "arm,armv8";
+			compatible = "qcom,kryo385";
 			reg = <0x0 0x600>;
 			enable-method = "psci";
 			efficiency = <1740>;
@@ -259,17 +259,17 @@
 			next-level-cache = <&L2_600>;
 			sched-energy-costs = <&CPU_COST_1 &CLUSTER_COST_1>;
 			L2_600: l2-cache {
-			      compatible = "arm,arch-cache";
+			      compatible = "cache";
 			      cache-size = <0x40000>;
 			      cache-level = <2>;
 			      next-level-cache = <&L3_0>;
 			};
 			L1_I_600: l1-icache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x24000>;
 			};
 			L1_D_600: l1-dcache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x14000>;
 			};
 			L1_TLB_600: l1-tlb {
@@ -279,7 +279,7 @@
 
 		CPU7: cpu@700 {
 			device_type = "cpu";
-			compatible = "arm,armv8";
+			compatible = "qcom,kryo385";
 			reg = <0x0 0x700>;
 			enable-method = "psci";
 			efficiency = <1740>;
@@ -290,17 +290,17 @@
 			next-level-cache = <&L2_700>;
 			sched-energy-costs = <&CPU_COST_1 &CLUSTER_COST_1>;
 			L2_700: l2-cache {
-			      compatible = "arm,arch-cache";
+			      compatible = "cache";
 			      cache-size = <0x40000>;
 			      cache-level = <2>;
 			      next-level-cache = <&L3_0>;
 			};
 			L1_I_700: l1-icache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x24000>;
 			};
 			L1_D_700: l1-dcache {
-				compatible = "arm,arch-cache";
+				compatible = "cache";
 				qcom,dump-size = <0x14000>;
 			};
 			L1_TLB_700: l1-tlb {
